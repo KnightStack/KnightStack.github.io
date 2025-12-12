@@ -1,0 +1,56 @@
+/* Custom styles for the site */
+
+/* Make the logo bigger - need !important to override theme default */
+.logo img {
+    height: 200px;        /* desired display height */
+    width: auto;           /* maintain aspect ratio */
+    image-rendering: auto; /* smooth scaling */
+}
+
+/* Reduce margin between name and subtitle on homepage */
+.content-center h1 {
+    margin-bottom: 0.2em !important;
+}
+
+.content-center h1 + p {
+    margin-top: 0 !important;
+}
+
+/* Make navbar background same as site background */
+/* Light mode: body is #fff, header was #fafafa */
+/* Dark mode: body is #232425, header was #1b1c1d */
+
+.header,
+.menu,
+.submenu {
+    background: #fff !important;
+    background-color: #fff !important;
+}
+
+[data-theme=dark] .header,
+[data-theme=dark] .menu,
+[data-theme=dark] .submenu {
+    background: #232425 !important;
+    background-color: #232425 !important;
+}
+
+[data-theme=light] .header,
+[data-theme=light] .menu,
+[data-theme=light] .submenu {
+    background: #fff !important;
+    background-color: #fff !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .header, .menu, .submenu {
+        background: #232425 !important;
+        background-color: #232425 !important;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .header, .menu, .submenu {
+        background: #fff !important;
+        background-color: #fff !important;
+    }
+}
